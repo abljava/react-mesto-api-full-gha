@@ -1,0 +1,6 @@
+.popup__tooltip_icon_fail {
+  width: 120px;
+  height: 120px;
+  background-image: url(../../../../images/registration-fail.png);
+  background-size: cover;
+}

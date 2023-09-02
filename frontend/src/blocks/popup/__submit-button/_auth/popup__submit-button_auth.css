@@ -1,0 +1,10 @@
+.popup__submit-button_auth {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.popup__submit-button:hover:enabled {
+  background-color: rgba(204, 204, 204, 0.9);
+}

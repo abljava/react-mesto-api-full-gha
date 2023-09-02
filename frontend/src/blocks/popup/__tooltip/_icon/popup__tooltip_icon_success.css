@@ -1,0 +1,6 @@
+.popup__tooltip_icon_success {
+  width: 120px;
+  height: 120px;
+  background-image: url(../../../../images/registration-success.png);
+  background-size: cover;
+}
