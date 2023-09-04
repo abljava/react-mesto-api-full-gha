@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 51.250.87.252
+IP 51.250.87.252
 
 Frontend https://placeapp.students.nomoredomainsicu.ru
 
