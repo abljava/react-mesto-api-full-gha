@@ -7,17 +7,25 @@ const { BadRequest } = require('../errors/bad-request');
 const { NotAuthorized } = require('../errors/not-authorized');
 const { Conflict } = require('../errors/conflict');
 
+const { NODE_ENV, JWT_SECRET } = process.env;
+const secretKey = 'SECRET_KEY';
+
 module.exports.login = (req, res, next) => {
   const { email, password } = req.body;
 
-  return User.findOne({ email }).select('+password')
+  return User.findOne({ email })
+    .select('+password')
     .then((user) => {
       if (!user || !bcrypt.compareSync(password, user.password)) {
         throw new NotAuthorized('Неправильные почта или пароль');
       }
-      const token = jwt.sign({ _id: user._id }, 'SECRET_KEY', {
-        expiresIn: '7d',
-      });
+      const token = jwt.sign(
+        { _id: user._id },
+        NODE_ENV === 'production' ? JWT_SECRET : secretKey,
+        {
+          expiresIn: '7d',
+        },
+      );
 
       res.send({ token });
     })
