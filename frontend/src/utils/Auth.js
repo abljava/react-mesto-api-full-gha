@@ -1,5 +1,4 @@
-export const BASE_URL = 'http://localhost:3000';
-// export const BASE_URL = 'https://mesto.nomoreparties.co/v1/cohort-66';
+export const BASE_URL = 'https://api.placeapp.students.nomoredomainsicu.ru';
 
 export const register = (email, password) => {
   return fetch(`${BASE_URL}/signup`, {
