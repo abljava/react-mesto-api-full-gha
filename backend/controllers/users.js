@@ -76,14 +76,6 @@ module.exports.getUserInfo = (req, res, next) => {
     });
 };
 
-module.exports.getUsers = (req, res, next) => {
-  User.find({})
-    .then((users) => {
-      res.send(users);
-    })
-    .catch(next);
-};
-
 module.exports.getUserById = (req, res, next) => {
   User.findById(req.params.userId)
     .then((user) => {
@@ -91,6 +83,14 @@ module.exports.getUserById = (req, res, next) => {
         throw new NotFoundError('Пользователь с таким id не найден');
       }
       res.send(user);
+    })
+    .catch(next);
+};
+
+module.exports.getUsers = (req, res, next) => {
+  User.find({})
+    .then((users) => {
+      res.send(users);
     })
     .catch(next);
 };
