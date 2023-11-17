@@ -6,9 +6,6 @@
 Адрес репозитория: https://github.com/abljava/react-mesto-api-full-gha.git
 
 ## Ссылки на проект
-
-IP 51.250.87.252
-
 Frontend https://placeapp.students.nomoredomainsicu.ru
 
 Backend https://api.placeapp.students.nomoredomainsicu.ru
